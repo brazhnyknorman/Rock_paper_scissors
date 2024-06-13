@@ -41,17 +41,21 @@ rock.addEventListener('click', function(onClick) {
   }
 })
 
+paper.addEventListener('click', function(onClick) {
+  if (computerScore < 5 && humanScore < 5) {
+    playGame('paper');
+  }
+})
 
-
+scissors.addEventListener('click', function(onClick) {
+  if (computerScore < 5 && humanScore < 5) {
+    playGame('scissors');
+  }
+})
 
 
 let humanScore = 0;
 let computerScore = 0;
-
-/*function getHumanChoice() {
-  let choice = prompt("Rock, Paper or Scissors?: ");
-  return choice;
-}*/
 
 function getComputerChoice() {
   let temp = Math.floor(Math.random() * 3) + 1;
